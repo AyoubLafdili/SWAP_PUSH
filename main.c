@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:28:43 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/25 18:59:11 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/25 23:50:56 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,15 +46,12 @@ void check_arg(char *arg)
             _free(&arg, '0');
     }
 }
-void fun() {system("leaks push_swap");}
 int main(int argc, char *argv[])
 {
     t_stack *stack_a;
     t_stack *stack_b;
     char *new_args;
-    atexit(fun);
-    // t_stack  *temp_a;
-    // t_stack  *temp_b;
+   
     
     stack_a = NULL;
     stack_b = NULL;
@@ -70,35 +67,9 @@ int main(int argc, char *argv[])
     parsing(new_args);
     max_min(new_args, &stack_a);    
     check_duplicat(&stack_a);
-    // which_sort(&stack_a, &stack_b);
-    // char *ptr = malloc(1220);
-    // fscanf(stdin, "c");
-    // system("leaks push_swap");
-    return (0);
+    which_sort(&stack_a, &stack_b);
+    ft_lstclear(&stack_a);
     
-    //ft_lstclear(&stack_a);
-    //printf("args: %s\n", new_args);
-        
-    // temp_a = stack_a;
-    // temp_b = stack_b;
-    // printf("stack A:\n");
-    // while (temp_a)
-    // {
-    //     printf("[%d]\n", temp_a -> data);
-    //     temp_a = temp_a -> next;
-    // }
-    // printf("stack B:\n");
-    // while (temp_b)
-    // {
-    //     printf("[%d]\n", temp_b -> data);
-    //     temp_b = temp_b -> next;
-    // }
-    // ft_lstclear(&stack_a);
-    // ft_lstclear(&stack_b); 
-    // while (1)
-    // {
-    //     sleep(2);
-    //     fun();
-    // }
+    return (0);
 }
 

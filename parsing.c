@@ -6,16 +6,11 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:21:15 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/25 15:47:28 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/25 23:51:17 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-static void fun()
-{
-    system("leaks push_swap");   
-}
 
 int check_right(char *chr)
 {

@@ -6,19 +6,11 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:27:52 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/25 15:52:09 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/25 23:52:26 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-
-
-static void fun()
-{
-    system("leaks push_swap");
-}
-
 
 void free_matrix(char **mtx)
 {
@@ -39,7 +31,6 @@ void _free(char **mtx, char flag)
     {
         free_matrix(mtx);
         write(2, "Error\n", 6);
-        atexit(fun);
         exit(1);
 
     }
@@ -47,7 +38,6 @@ void _free(char **mtx, char flag)
     {
         free(*mtx);
         write(2, "Error\n", 6);
-        atexit(fun);
         exit(1);
     }
     else if (flag == 'f')
@@ -55,7 +45,6 @@ void _free(char **mtx, char flag)
     else
     {
         write(2, "Error\n", 6);
-        atexit(fun);
         exit(1);
     }
 }

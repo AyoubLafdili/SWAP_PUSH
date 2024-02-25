@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:25:56 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/25 20:15:16 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/25 23:33:06 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,8 @@ void check_duplicat(t_stack **list)
     {
         if (search(temp -> data, temp -> next) == 1)
         {
-            //ft_lstclear(list);
+            ft_lstclear(list);
             write(2, "Error\n", 7);
-            // atexit(fun);
-            
             exit(1);
         }
         else

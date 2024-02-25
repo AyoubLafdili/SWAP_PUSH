@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 14:47:08 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/11 13:51:32 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/25 23:32:38 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void max_min(char *args, t_stack **head)
         }
         else
         {
+            ft_lstclear(head);
             _free(nbs, 'f');
             _free(&args, 'p');
         }
