@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:21:15 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/25 23:51:17 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/26 12:14:32 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,7 @@ void parsing(char *args)
     
     i = 0;
     if (args == NULL)
-    {
-        sleep(20);
         exit(0);
-    }
     while(args[i])
     {
         if ((ft_isdigit(args[i]) == 1) || args[i] == '+' || args[i] == '-')

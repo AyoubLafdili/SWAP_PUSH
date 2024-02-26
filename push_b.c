@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:10:08 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/19 18:39:30 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/26 15:42:15 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void ft_pb(t_stack **head_a, t_stack **head_b)
         *head_b = crt_add_front(*head_b, (*head_a) -> data);
         *head_a = (*head_a) -> next;
         free(temp);
+        write(1, "pb\n", 3);
     }
-     write(1, "pb\n", 3);
 }

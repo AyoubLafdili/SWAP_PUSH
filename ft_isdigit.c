@@ -6,18 +6,15 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:41:21 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/07 18:31:56 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/26 11:36:41 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "push_swap.h"
+
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
 }
-// int main()
-// {
-// 	printf("%d\n", ft_isdigit('1'));
-// }

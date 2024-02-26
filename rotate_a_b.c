@@ -6,12 +6,12 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 22:38:42 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/23 11:55:11 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:00:34 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-static void ft_rat(t_stack **head_a)
+void ra(t_stack **head_a)
 {
     t_stack *last;
     t_stack *first;
@@ -27,7 +27,7 @@ static void ft_rat(t_stack **head_a)
         first -> next = NULL;    
     }
 }
-static void ft_rbt(t_stack **head_b)
+void rb(t_stack **head_b)
 {
     t_stack *last;
     t_stack *first;
@@ -48,8 +48,8 @@ void ft_rr(t_stack **head_a, t_stack **head_b)
 {
     if (*head_a && *head_b)
     {
-        ft_rat(head_a);
-        ft_rbt(head_b);
+        ra(head_a);
+        rb(head_b);
+        write(1, "rr\n", 3);
     }
-    write(1, "rr\n", 3);
 }

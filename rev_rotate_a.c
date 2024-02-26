@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 19:03:26 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/19 18:38:29 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:07:02 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void ft_rra(t_stack **head_a)
 
     first = *head_a;
     prev = NULL;
-    if (*head_a)
+    if (*head_a && (*head_a) -> next)
     {
         while((*head_a) -> next)
         {
@@ -29,6 +29,6 @@ void ft_rra(t_stack **head_a)
         }
         prev -> next = NULL;
         (*head_a) -> next = first;    
+        write(1, "rra\n", 4);
     }
-    write(1, "rra\n", 4);
 }

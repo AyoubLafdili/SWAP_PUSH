@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:28:43 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/25 23:50:56 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/26 13:37:00 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ int main(int argc, char *argv[])
     check_duplicat(&stack_a);
     which_sort(&stack_a, &stack_b);
     ft_lstclear(&stack_a);
-    
     return (0);
 }
 

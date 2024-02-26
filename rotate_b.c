@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 22:30:56 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/23 11:47:43 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/26 15:51:18 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void ft_rb(t_stack **head_b)
         *head_b = (*head_b) -> next;
         last -> next = first;
         first -> next = NULL;    
+        write(1, "rb\n", 3);
     }
-    write(1, "rb\n", 3);
 }

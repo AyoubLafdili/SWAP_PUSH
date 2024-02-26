@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:27:52 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/25 23:52:26 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/02/26 13:48:56 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void _free(char **mtx, char flag)
         free_matrix(mtx);
         write(2, "Error\n", 6);
         exit(1);
-
     }
     else if (flag == 'p')
     {
