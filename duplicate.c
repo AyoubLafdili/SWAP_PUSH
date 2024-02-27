@@ -24,6 +24,7 @@ int search(int data, t_stack *to_search)
     }
     return 0;
 }
+
 void check_duplicat(t_stack **list)
 {
     t_stack *temp;
@@ -41,3 +42,4 @@ void check_duplicat(t_stack **list)
             temp = temp -> next;
     }
 }
+

@@ -32,19 +32,22 @@ void which_sort(t_stack **stack_a, t_stack **stack_b)
         srt_rest(stack_a, stack_b);
 }
 
-void check_arg(char *arg)
+void check_arg(char *arg, char *new_args)
 {
     int i;
     i = 0;
-    if (arg[0] == '\0')
-        _free(&arg, '0');
-    else
-    {
-        while (arg[i] == 32 && arg[i])
-            i++;
-        if (arg[i] == '\0')
-            _free(&arg, '0');
-    }
+    
+	while (arg[i] == 32 && arg[i])
+		i++;
+	if (arg[i] == '\0')
+	{
+		if (new_args)
+			free(new_args);
+		_free(&arg, '0');
+	
+	}
+		
+		_free(&arg, '0');
 }
 int main(int argc, char *argv[])
 {
@@ -59,7 +62,7 @@ int main(int argc, char *argv[])
     argc = 1;
     while (argv[argc])
     {
-        check_arg(argv[argc]);
+        check_arg(argv[argc], new_args);
         new_args = ft_strjoin(new_args, argv[argc]);
         new_args = ft_strjoin(new_args, "  ");
         argc++;
