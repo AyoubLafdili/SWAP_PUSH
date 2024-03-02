@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:50:28 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/28 10:30:03 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/03/02 11:51:30 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,4 @@ char	**ft_split(const char *s, char c)
 	if (ns == NULL)
 		return (NULL);
 	return (wlen(ns, s, c));
-	return NULL;
 }

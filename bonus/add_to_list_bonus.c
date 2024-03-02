@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:21:32 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/28 19:28:22 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/03/02 10:18:20 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 }
 
-static t_list *ft_lstnew(char *content)
+static t_list	*ft_lstnew(char *content)
 {
 	t_list	*new_node;
 
@@ -41,10 +41,11 @@ static t_list *ft_lstnew(char *content)
 	return (new_node);
 }
 
-t_list *add_to_list(t_list *head, char *data)
+t_list	*add_to_list(t_list *head, char *data)
 {
-    t_list *new_elem;
-    new_elem = ft_lstnew(data);
-    ft_lstadd_back(&head, new_elem);
-    return (head);
+	t_list	*new_elem;
+
+	new_elem = ft_lstnew(data);
+	ft_lstadd_back(&head, new_elem);
+	return (head);
 }

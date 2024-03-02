@@ -6,28 +6,27 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:04:41 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/28 12:19:24 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/03/02 10:10:17 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../checker_bonus.h"
 
-void rrb(t_stack **head_b)
+void	rrb(t_stack **head_b)
 {
-    t_stack *first;
-    t_stack *prev;
+	t_stack	*first;
+	t_stack	*prev;
 
-    prev = NULL;
-    first = *head_b;
-    if (*head_b && (*head_b) -> next)
-    {
-        
-        while ((*head_b) -> next)
-        {
-            prev = *head_b;
-            *head_b = (*head_b) -> next;
-        }
-        prev -> next = NULL;
-        (*head_b) -> next = first;
-    }
+	prev = NULL;
+	first = *head_b;
+	if (*head_b && (*head_b)->next)
+	{
+		while ((*head_b)->next)
+		{
+			prev = *head_b;
+			*head_b = (*head_b)->next;
+		}
+		prev->next = NULL;
+		(*head_b)->next = first;
+	}
 }

@@ -6,39 +6,38 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:02:45 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/29 11:54:49 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/03/02 11:41:42 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-int search(int data, t_stack *to_search)
+int	search(int data, t_stack *to_search)
 {
-    
-    while(to_search)
-    {
-        if (to_search -> data == data)
-            return 1;
-        else
-        to_search = to_search -> next;
-    }
-    return 0;
+	while (to_search)
+	{
+		if (to_search->data == data)
+			return (1);
+		else
+			to_search = to_search->next;
+	}
+	return (0);
 }
 
-void check_duplicat(t_stack **list)
+void	check_duplicat(t_stack **list)
 {
-    t_stack *temp;
+	t_stack	*temp;
 
-    temp = *list;
-    while (temp)
-    {
-        if (search(temp -> data, temp -> next) == 1)
-        {
-            list_clear(*list, NULL, 0);
-            write(2, "Error\n", 7);
-            exit(1);
-        }
-        else
-            temp = temp -> next;
-    }
+	temp = *list;
+	while (temp)
+	{
+		if (search(temp->data, temp->next) == 1)
+		{
+			list_clear(*list, NULL, 0);
+			write(2, "Error\n", 7);
+			exit(1);
+		}
+		else
+			temp = temp -> next;
+	}
 }

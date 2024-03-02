@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 19:16:12 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/29 10:56:18 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/03/02 09:59:29 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ static char	*buffer_update(char *buffer)
 	else if (buffer[start] == '\0')
 		return (free(buffer), NULL);
 	updated = ft_substr(buffer, start, ft_strlen(buffer) - start);
+	if (updated[0] == '\0')
+		return (free(updated), free(buffer), NULL);
 	free(buffer);
 	return (updated);
 }

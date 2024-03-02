@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:10:40 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/28 11:37:48 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/03/02 11:50:27 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_atoi(const char *str, int *set)
 	{
 		result = result * 10 + *str - '0';
 		if (!(result * signe >= -2147483648 && result * signe <= 2147483647))
-			return(1);
+			return (1);
 		str++;
 	}
 	*set = result * signe;

@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:33:11 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/28 19:11:40 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/03/02 10:15:01 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_lstadd_back(t_stack **lst, t_stack *new)
 	}
 }
 
-t_stack *ft_lstnew(int content)
+t_stack	*ft_lstnew(int content)
 {
 	t_stack	*new_node;
 
@@ -42,10 +42,11 @@ t_stack *ft_lstnew(int content)
 	return (new_node);
 }
 
-t_stack *add_to_stack(t_stack *head, int data)
+t_stack	*add_to_stack(t_stack *head, int data)
 {
-    t_stack *new_elem;
-    new_elem = ft_lstnew(data);
-    ft_lstadd_back(&head, new_elem);
-    return (head);
+	t_stack	*new_elem;
+
+	new_elem = ft_lstnew(data);
+	ft_lstadd_back(&head, new_elem);
+	return (head);
 }

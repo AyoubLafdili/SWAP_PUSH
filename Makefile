@@ -1,4 +1,4 @@
-NAME = mandatory/push_swap
+NAME = push_swap
 M_HEADER = mandatory/push_swap.h
 EX_FILE = checker
 M_DIR = mandatory
@@ -16,7 +16,7 @@ U_SRC = $(U_DIR)/ft_atoi.c $(U_DIR)/ft_isdigit.c $(U_DIR)/ft_split.c $(U_DIR)/ft
 		$(U_DIR)/ft_strlcat.c $(U_DIR)/ft_strlcpy.c $(U_DIR)/ft_strlen.c $(U_DIR)/ft_substr.c \
 
 M_SRC = $(M_DIR)/main.c $(M_DIR)/add_to_stack.c $(M_DIR)/duplicate.c $(M_DIR)/sort_rest.c \
-		$(M_DIR)/list_size.c $(M_DIR)/ft_lstclear.c $(M_DIR)/set_target_a.c $(M_DIR)/set_target_b.c \
+		$(M_DIR)/list_size.c $(M_DIR)/ft_lstclear.c $(M_DIR)/set_target_b.c \
 		$(M_DIR)/check_sort.c $(M_DIR)/get_cost.c $(M_DIR)/_is_sorted.c $(M_DIR)/max_min_v.c $(M_DIR)/max_min.c \
 		$(M_DIR)/mem_free.c $(M_DIR)/parsing.c $(M_DIR)/crt_add_front.c $(M_DIR)/sort_three.c $(O_DIR)/push_b.c \
 		$(O_DIR)/push_a.c $(O_DIR)/swap_a.c $(O_DIR)/swap_b.c $(O_DIR)/swap_a_b.c \

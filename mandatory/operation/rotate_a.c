@@ -6,26 +6,26 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 22:14:46 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/27 22:55:17 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/03/02 09:23:38 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void ft_ra(t_stack **head_a)
+void	ft_ra(t_stack **head_a)
 {
-    t_stack *last;
-    t_stack *first;
-    
-    first = *head_a;
-    last = *head_a;
-    if (*head_a && (*head_a) -> next)
-    {
-        while(last -> next)
-            last = last -> next;
-        *head_a = (*head_a) -> next;
-        last -> next = first;
-        first -> next = NULL;    
-        write(1, "ra\n", 3);
-    }
+	t_stack	*last;
+	t_stack	*first;
+
+	first = *head_a;
+	last = *head_a;
+	if (*head_a && (*head_a)->next)
+	{
+		while (last->next)
+			last = last->next;
+		*head_a = (*head_a)->next;
+		last->next = first;
+		first->next = NULL;
+		write(1, "ra\n", 3);
+	}
 }

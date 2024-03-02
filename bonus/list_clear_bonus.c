@@ -6,27 +6,31 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:01:00 by alafdili          #+#    #+#             */
-/*   Updated: 2024/02/29 11:58:07 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/03/02 11:44:09 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-void free_list(t_list *to_free)
+void	free_list(t_list *to_free)
 {
-    t_list	*temp;
+	t_list	*temp;
+
 	if (!to_free)
 		return ;
 	while (to_free)
 	{
 		temp = to_free;
 		to_free = to_free->next;
+		free(temp -> content);
 		free(temp);
 	}
 }
-void free_stack(t_stack *lst)
+
+void	free_stack(t_stack *lst)
 {
-    t_stack	*temp;
+	t_stack	*temp;
+
 	if (!lst)
 		return ;
 	while (lst)
@@ -45,5 +49,5 @@ void	list_clear(t_stack *lst, t_list *head_list, int flag)
 		return ;
 	}
 	else
-	free_stack(lst);
+		free_stack(lst);
 }
