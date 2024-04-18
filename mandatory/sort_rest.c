@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 19:16:34 by alafdili          #+#    #+#             */
-/*   Updated: 2024/03/01 22:50:55 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/18 17:03:25 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,8 @@ void	b_to_a(t_stack **stack_a, t_stack **stack_b)
 
 	while (*stack_b)
 	{
-		set_target_b(*stack_a, *stack_b);
-		best = get_cost(*stack_b, *stack_a);
+		set_target(*stack_a, *stack_b);
+		best = get_cost(*stack_a, *stack_b);
 		aplly_action(stack_a, stack_b, best);
 		ft_pa(stack_a, stack_b);
 	}

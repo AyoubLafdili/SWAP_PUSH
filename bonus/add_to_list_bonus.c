@@ -6,15 +6,15 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:21:32 by alafdili          #+#    #+#             */
-/*   Updated: 2024/03/02 10:18:20 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/18 23:31:46 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-static void	ft_lstadd_back(t_list **lst, t_list *new)
+void	lstadd_back(t_ops **lst, t_ops *new)
 {
-	t_list	*temp;
+	t_ops	*temp;
 
 	if (!lst)
 		return ;
@@ -29,11 +29,11 @@ static void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 }
 
-static t_list	*ft_lstnew(char *content)
+t_ops	*lstnew(char *content)
 {
-	t_list	*new_node;
+	t_ops	*new_node;
 
-	new_node = malloc(sizeof(t_list));
+	new_node = malloc(sizeof(t_ops));
 	if (!new_node)
 		return (NULL);
 	new_node -> content = content;
@@ -41,11 +41,13 @@ static t_list	*ft_lstnew(char *content)
 	return (new_node);
 }
 
-t_list	*add_to_list(t_list *head, char *data)
+t_ops	*add_to_list(t_ops *head, char *data)
 {
-	t_list	*new_elem;
+	t_ops	*new_elem;
 
-	new_elem = ft_lstnew(data);
-	ft_lstadd_back(&head, new_elem);
+	new_elem = lstnew(data);
+	if (!new_elem)
+		return (list_clear(NULL, head, 1), NULL);
+	lstadd_back(&head, new_elem);
 	return (head);
 }

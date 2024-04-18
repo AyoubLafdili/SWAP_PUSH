@@ -6,13 +6,13 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 14:47:08 by alafdili          #+#    #+#             */
-/*   Updated: 2024/03/01 22:10:26 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/18 19:32:23 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_call(char *args, char **mtx, int flag)
+void	free_invoke(char *args, char **mtx, int flag)
 {
 	if (flag == 1)
 	{
@@ -26,31 +26,31 @@ void	free_call(char *args, char **mtx, int flag)
 	}
 }
 
-void	max_min(char *args, t_stack **head)
+void	max_min(char *inputs, t_stack **head)
 {
-	char	**nbs;
+	char	**args;
 	int		i;
-	int		temp;
+	int		tmp;
 
 	i = 0;
-	temp = 0;
-	nbs = ft_split(args, ' ');
-	if (nbs == NULL)
-		_free(&args, 'p');
-	while (nbs[i])
+	tmp = 0;
+	args = ft_split(inputs, ' ');
+	if (args == NULL)
+		_free(&inputs, 'p');
+	while (args[i])
 	{
-		if (ft_atoi(nbs[i], &temp) == 0)
+		if (atoi_check(args[i], &tmp) == 0)
 		{
-			*head = add_to_stack(*head, temp);
+			*head = add_to_stack(*head, tmp);
 			if (*head == NULL)
-				free_call(args, nbs, 1);
+				free_invoke(inputs, args, 1);
 			i++;
 		}
 		else
 		{
-			ft_lstclear(head);
-			free_call(args, nbs, 1);
+			list_clear(head);
+			free_invoke(inputs, args, 1);
 		}
 	}
-	free_call(args, nbs, 0);
+	free_invoke(inputs, args, 0);
 }

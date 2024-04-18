@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 16:07:27 by alafdili          #+#    #+#             */
-/*   Updated: 2024/03/01 22:52:28 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:11:11 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	srt_three(t_stack **head_a)
 	int		min;
 	int		max;
 
+	min = 0;
+	max = 0;
 	get_max_min(*head_a, &min, &max);
 	last = ((*head_a)->next)->next;
 	if ((*head_a)->data == min && last->data != max)

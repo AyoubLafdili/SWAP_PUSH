@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 15:26:09 by alafdili          #+#    #+#             */
-/*   Updated: 2024/03/02 09:32:02 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/18 17:06:09 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,27 +32,27 @@ int	get_move(t_stack *head, int content)
 
 t_stack	*get_cost(t_stack *stack_a, t_stack *stack_b)
 {
-	t_stack	*head_a;
+	t_stack	*head_b;
 	t_stack	*lowest;
 	int		min_cost;
 	int		temp;
 
-	head_a = stack_a;
-	lowest = head_a;
-	min_cost = get_move(stack_a, head_a -> data)
-		+ get_move(stack_b, head_a -> target -> data);
-	while (head_a)
+	head_b = stack_b;
+	lowest = head_b;
+	min_cost = get_move(stack_b, head_b -> data)
+		+ get_move(stack_a, head_b -> target -> data);
+	while (head_b)
 	{
-		temp = get_move(stack_a, head_a -> data)
-			+ get_move(stack_b, head_a -> target -> data);
+		temp = get_move(stack_b, head_b -> data)
+			+ get_move(stack_a, head_b -> target -> data);
 		if (temp < min_cost)
 		{
 			min_cost = temp;
-			lowest = head_a;
-			head_a = head_a -> next;
+			lowest = head_b;
+			head_b = head_b -> next;
 		}
 		else
-			head_a = head_a -> next;
+			head_b = head_b -> next;
 	}
 	return (lowest);
 }

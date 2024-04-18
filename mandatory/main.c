@@ -6,7 +6,7 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:28:43 by alafdili          #+#    #+#             */
-/*   Updated: 2024/03/01 21:40:23 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/18 23:36:19 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ void	which_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int	size;
 
-	if (!stack_a)
-		return ;
 	if (_is_sorted(*stack_a) == 1)
 	{
-		ft_lstclear(stack_a);
+		list_clear(stack_a);
 		return ;
 	}
 	size = list_size(*stack_a);
@@ -61,13 +59,17 @@ int	main(int argc, char *argv[])
 	{
 		check_arg(argv[argc], new_args);
 		new_args = ft_strjoin(new_args, argv[argc]);
-		new_args = ft_strjoin(new_args, "  ");
+		if (!new_args)
+			return (1);
+		new_args = ft_strjoin(new_args, " ");
+		if (!new_args)
+			return (1);
 		argc++;
 	}
 	parsing(new_args);
 	max_min(new_args, &stack_a);
 	check_duplicat(&stack_a);
 	which_sort(&stack_a, &stack_b);
-	ft_lstclear(&stack_a);
+	list_clear(&stack_a);
 	return (0);
 }

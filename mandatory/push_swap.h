@@ -6,13 +6,16 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 11:58:02 by alafdili          #+#    #+#             */
-/*   Updated: 2024/03/02 09:58:35 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/18 17:03:38 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# include "../utils/utils.h"
+
+# include <unistd.h>
+# include <stdlib.h>
+# include "libft.h"
 
 typedef struct s_stack
 {
@@ -22,21 +25,23 @@ typedef struct s_stack
 }	t_stack;
 
 t_stack	*add_to_stack(t_stack *top, int data);
-t_stack	*ft_lstnew(int content);
+t_stack	*lstnew(int content);
 t_stack	*crt_add_front(t_stack *head, int data);
 t_stack	*get_cost(t_stack *stack_a, t_stack *stack_b);
 int		_is_sorted(t_stack *stack_a);
 int		list_size(t_stack *lst);
-void	ft_lstclear(t_stack **lst);
-void	ft_lstadd_back(t_stack **lst, t_stack *new);
+void	list_clear(t_stack **lst);
+void	lstadd_back(t_stack **lst, t_stack *new);
 void	parsing(char *args);
 void	check_duplicat(t_stack **list);
 void	max_min(char *args, t_stack **head);
 void	_free(char **mtx, char flag);
-void	set_target_b(t_stack *head_a, t_stack *head_b);
+void	set_target(t_stack *head_a, t_stack *head_b);
 void	get_max_min(t_stack *head_a, int *min_num, int *max_num);
 void	check_sort(t_stack **stack_a);
+int		atoi_check(const char *str, int *set);
 
+//operattion:  
 void	ft_pb(t_stack **head_a, t_stack **head_b);
 void	ft_pa(t_stack **head_a, t_stack **head_b);
 void	ft_ss(t_stack **head_a, t_stack **head_b);
@@ -49,6 +54,7 @@ void	ft_rb(t_stack **head_b);
 void	ft_rra(t_stack **head_a);
 void	ft_rrb(t_stack **head_b);
 
+//sort functions:
 void	srt_three(t_stack **head_a);
 void	srt_rest(t_stack **stack_a, t_stack **stack_b);
 #endif
