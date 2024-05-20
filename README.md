@@ -10,7 +10,9 @@ The goal of the algorithm is to minimise the number of operations needed to sort
 
 # Usage:
 1. Clone the PUSH_SWAP repo to your local:
-	> git clone https://github.com/AyoubLafdili/SWAP_PUSH.git
+
+	> git clone https://github.com/AyoubLafdili/push_swap.git
+ 
 3. To compile the push_swap program run the following:
 
    	> make
