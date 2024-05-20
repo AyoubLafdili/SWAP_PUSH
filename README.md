@@ -25,4 +25,4 @@ The goal of the algorithm is to minimise the number of operations needed to sort
 > ***Integers numbers must be***: Non duplicated, In range of type (int)
 
 # RESOURCES:
-- Program algorithm: https://shorturl.at/EHgTn
+- Program algorithm: [https://shorturl.at/EHgTn](https://medium.com/@ayogun/push-swap-c1f5d2d41e97)
