@@ -6,11 +6,11 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:21:32 by alafdili          #+#    #+#             */
-/*   Updated: 2024/04/18 23:31:46 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/19 12:58:49 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker_bonus.h"
+#include "checker.h"
 
 void	lstadd_back(t_ops **lst, t_ops *new)
 {

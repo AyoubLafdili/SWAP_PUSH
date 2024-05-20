@@ -6,11 +6,11 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 12:41:21 by alafdili          #+#    #+#             */
-/*   Updated: 2024/04/17 23:05:25 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/19 12:58:49 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker_bonus.h"
+#include "checker.h"
 
 void	rest_ins(t_ops *temp, t_stack **stack_a, t_stack **stack_b)
 {

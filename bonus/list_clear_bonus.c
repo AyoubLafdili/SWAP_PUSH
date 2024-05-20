@@ -6,11 +6,11 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:01:00 by alafdili          #+#    #+#             */
-/*   Updated: 2024/04/18 23:23:31 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/19 12:58:49 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker_bonus.h"
+#include "checker.h"
 
 void	free_list(t_ops *to_free)
 {

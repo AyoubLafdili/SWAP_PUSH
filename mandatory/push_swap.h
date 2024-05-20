@@ -6,15 +6,13 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 11:58:02 by alafdili          #+#    #+#             */
-/*   Updated: 2024/04/18 17:03:38 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/19 12:44:11 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <unistd.h>
-# include <stdlib.h>
 # include "libft.h"
 
 typedef struct s_stack

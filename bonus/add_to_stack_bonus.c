@@ -6,11 +6,11 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:33:11 by alafdili          #+#    #+#             */
-/*   Updated: 2024/04/18 21:15:26 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/19 12:58:49 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker_bonus.h"
+#include "checker.h"
 
 static void	lstadd_back(t_stack **lst, t_stack *new)
 {
@@ -37,7 +37,6 @@ static t_stack	*lstnew(int content)
 	if (!new_node)
 		return (NULL);
 	new_node -> data = content;
-	new_node -> target = NULL;
 	new_node -> next = NULL;
 	return (new_node);
 }

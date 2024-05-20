@@ -6,11 +6,11 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:10:56 by alafdili          #+#    #+#             */
-/*   Updated: 2024/04/18 19:17:11 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/19 12:58:49 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker_bonus.h"
+#include "checker.h"
 
 void	pa(t_stack **head_a, t_stack **head_b)
 {

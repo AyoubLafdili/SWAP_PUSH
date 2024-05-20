@@ -6,11 +6,11 @@
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 21:06:41 by alafdili          #+#    #+#             */
-/*   Updated: 2024/04/18 23:34:50 by alafdili         ###   ########.fr       */
+/*   Updated: 2024/04/19 13:07:25 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker_bonus.h"
+#include "checker.h"
 
 int	input_check(char *input)
 {

@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.h                                    :+:      :+:    :+:   */
+/*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alafdili <alafdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/29 12:44:38 by alafdili          #+#    #+#             */
-/*   Updated: 2024/04/18 23:33:42 by alafdili         ###   ########.fr       */
+/*   Created: 2024/04/19 12:55:29 by alafdili          #+#    #+#             */
+/*   Updated: 2024/04/19 12:56:53 by alafdili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_BONUS_H
-# define CHECKER_BONUS_H
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
-# endif
+#ifndef CHECKER_H
+# define CHECKER_H
 
 # include "libft.h"
-# include <stdlib.h>
-# include <unistd.h>
 
 typedef struct s_stack
 {
 	int				data;
-	struct s_stack	*target;
 	struct s_stack	*next;
 }	t_stack;
 
@@ -47,16 +40,16 @@ void	apply_ins(t_ops *head_list, t_stack **a, t_stack **b);
 int		atoi_check(const char *str, int *set);
 
 //operations:
+void	pa(t_stack **head_a, t_stack **head_b);
+void	pb(t_stack **head_a, t_stack **head_b);
 void	rrr(t_stack **head_a, t_stack **head_b);
 void	rr(t_stack **head_a, t_stack **head_b);
 void	ss(t_stack **head_a, t_stack **head_b);
-void	pa(t_stack **head_a, t_stack **head_b);
-void	pb(t_stack **head_a, t_stack **head_b);
 void	rra(t_stack **head_a);
 void	rrb(t_stack **head_b);
-void	ra(t_stack **head_a);
-void	rb(t_stack **head_b);
 void	sa(t_stack **head_a);
 void	sb(t_stack **head_b);
+void	ra(t_stack **head_a);
+void	rb(t_stack **head_b);
 
 #endif

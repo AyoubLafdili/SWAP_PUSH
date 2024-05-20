@@ -1,19 +1,21 @@
 NAME = push_swap
-M_HEADER = mandatory/push_swap.h
 B_NAME = checker
+
+M_HEADER = mandatory/push_swap.h
+B_HEADER = bonus/checker.h
+
 M_DIR = mandatory
 B_DIR = bonus
-B_HEADER = bonus/checker_bonus.h
-U_DIR = utils
-FLAGS = -Wall -Wextra -Werror
+
 COMPILE = cc
+FLAGS = -Wall -Wextra -Werror
 REMOVE = rm -f
 
 M_SRC = $(M_DIR)/sort_three.c $(M_DIR)/main.c $(M_DIR)/add_to_stack.c \
 		$(M_DIR)/duplicate.c $(M_DIR)/sort_rest.c $(M_DIR)/lstclear.c \
 		$(M_DIR)/list_size.c $(M_DIR)/set_target.c $(M_DIR)/check_sort.c \
-		$(M_DIR)/get_cost.c $(M_DIR)/_is_sorted.c $(M_DIR)/max_min_v.c \
-		$(M_DIR)/max_min.c $(M_DIR)/mem_free.c $(M_DIR)/parsing.c \
+		$(M_DIR)/get_cost.c $(M_DIR)/_is_sorted.c $(M_DIR)/get_max_min.c \
+		$(M_DIR)/max_min_check.c $(M_DIR)/mem_free.c $(M_DIR)/parsing.c \
 		$(M_DIR)/crt_add_front.c $(M_DIR)/push_b.c $(M_DIR)/push_a.c \
 		$(M_DIR)/swap_a.c $(M_DIR)/swap_b.c $(M_DIR)/rev_rotate_a.c \
 		$(M_DIR)/rev_rotate_b.c $(M_DIR)/rotate_a.c $(M_DIR)/rotate_b.c \
@@ -35,6 +37,7 @@ B_SRC = $(B_DIR)/checker.c $(B_DIR)/add_to_stack_bonus.c \
 		$(B_DIR)/swap_b_bonus.c $(B_DIR)/rev_rotate_b_bonus.c
 
 M_OBJECT = $(M_SRC:.c=.o)
+
 B_OBJECT = $(B_SRC:.c=.o)
 
 bonus/%.o:bonus/%.c $(B_HEADER)
@@ -64,3 +67,5 @@ fclean: clean
 	$(REMOVE) $(NAME) $(B_NAME)
 
 re: fclean all
+
+.PHONY: clean
