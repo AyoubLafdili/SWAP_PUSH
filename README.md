@@ -26,3 +26,4 @@ The goal of the algorithm is to minimise the number of operations needed to sort
 
 # RESOURCES:
 - Program algorithm: [https://shorturl.at/EHgTn](https://medium.com/@ayogun/push-swap-c1f5d2d41e97)
+- Linked lists: https://bit.ly/3V7fyVA
